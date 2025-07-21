@@ -1,0 +1,182 @@
+/* 023e8a - button  , a2d2ff-navbar , 38a3a5 -hover */
+
+.card-shadow {
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+    /* Ease out, then ease in for a smooth landing/start */
+    animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+
+  /* Upward movements - now with an even slower, more gentle ease-out */
+  20% {
+    transform: translateY(-20%);
+    animation-timing-function: cubic-bezier(0.3, 0.9, 0.3, 1);
+    /* Slower, more pronounced ease-out */
+  }
+
+  40% {
+    transform: translateY(0);
+    animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+
+  60% {
+    transform: translateY(-15%);
+    animation-timing-function: cubic-bezier(0.3, 0.9, 0.3, 1);
+  }
+
+  80% {
+    transform: translateY(0);
+    animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+
+  100% {
+    transform: translateY(-5%);
+    animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+  }
+}
+
+.bounce-1s {
+  animation: bounce 1s forwards;
+  /* 1 second animation */
+}
+
+.bounce-2s {
+  animation: bounce 1.25s forwards;
+  /* 1.25 second animation */
+}
+
+.bounce-3s {
+  animation: bounce 1.5s forwards;
+  /* 1.5 second animation */
+}
+
+.bounce-4s {
+  animation: bounce 1.75s forwards;
+  /* 1.75 second animation */
+}
+
+@media screen and (max-width: 1200px){
+  .cards{
+    margin-inline: 0;
+    gap: 0rem;
+    padding-inline: 0;
+  }
+}
+
+
+@media screen and (max-width: 965px) {
+  #home-text {
+    font-size: 45px;
+  }
+  .cards img{
+    margin-left: 0;
+  }
+  .cards p{
+    padding: 15px;
+  }
+  .cards{
+    gap: 14px;
+  }
+
+  #home-btn {
+    font-size: large;
+    padding: 2px 0px 2px 0px;
+  }
+  #home-btn{
+    padding: 0.75rem;
+    max-width: 290px ;
+  }
+  #home-block{
+    width: 200px;
+    /* padding: 15px; */
+  }
+}
+
+@media screen and (max-width: 750px) {
+  #home-block {
+    width: 250px;
+    margin: auto;
+    padding: 15px;
+  }
+  .cards-text{
+    gap: 10px;
+    margin-bottom: 1rem;
+  }
+  .blocks{
+    flex-wrap: wrap;
+    display: flex;
+    gap: 45px;
+  }
+  #home-text {
+    font-size: 41px;
+  }
+  #home-btn{
+    max-width: 270px;
+  }
+}
+
+@media  screen and (max-width: 670px) {
+  #home-text{
+    font-size: 37px;
+  }
+  #home-text .first-text{
+    margin: 0;
+  }
+  #home-btn{
+    max-width: 250px;
+  }
+}
+
+@media  screen and (max-width: 580px) {
+  #home-text{
+    font-size: 30px;
+  }
+  #home-text .first-text{
+    margin: 0 21px;
+  }
+  #home-text .second-text{
+    margin-left: 80px;
+    margin-right: 80px;
+  }
+  #home-btn{
+    max-width: 230px;
+  }
+  .cards img{
+    margin: auto;
+    width: 15rem;
+  }
+}
+
+@media  screen and (max-width: 380px) {
+  #home-text{
+    font-size: 30px;
+    padding-left: 0;
+    padding-right: 0;
+    height: 46vh !important;
+  }
+  #home-text .second-text{
+    margin: 1rem 1rem;
+  }
+  #home-block {
+    border-radius: 30px;
+    margin: 10px auto 0;
+    width: 220px;
+  }
+  #home-text .text-center{
+    margin-left: 24px;
+    margin-right: 24px;
+  }
+  #home-btn{
+    padding: 10px;
+    max-width: 210px ;
+    margin: 0;
+  }
+  .blocks{
+    margin-top: 40px;
+  }
+}
+

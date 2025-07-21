@@ -1,0 +1,151 @@
+.card-text{
+    margin: auto;
+    padding: 0  2.4rem;
+}
+
+.hero-container {
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-container p {
+    padding-inline: 10rem;
+    text-align: center;
+}
+
+.team {
+    border: 2px solid rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.1);
+}
+
+
+@media screen and (max-width: 1250px) {
+    .card{
+        margin: 0 160px 112px;
+        gap: 110px
+    }
+    .vision-text{
+        height: 33vh;
+    }
+    .vision-text p{
+        padding: 20px;
+    }
+    .team-box{
+        margin-inline: 138px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .card{
+        margin: 0 100px 112px;
+        gap: 95px
+    }
+    .team-btn-space{
+        flex: 0;
+    }
+    .team-box{
+        margin-inline: 100px;
+    }
+    .team-heading{
+        margin: 0 30px 40px;
+    }
+    .hero-container p{
+        padding-inline: 5rem;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .card{
+        margin: 0 50px 112px;
+        gap: 50px
+    }
+    .vision-text{
+        height: 36vh;
+    }
+    .team-box{
+        margin-inline: 20px;
+        gap: 0.8rem;
+    }
+    .team-heading{
+        margin: 0 20px 40px;
+    }
+}
+
+@media screen and (max-width: 660px) {
+    .card{
+        flex-direction: column;
+        gap: 40px;
+    }
+    .card-img{
+        display: flex;
+        justify-content: center;
+    }
+    .card-img img{
+        height: 280px;
+        width: 300px;
+    }
+    .card-text{
+        padding: 12px;
+    }
+    .vision-text{
+        height: 45vh;
+    }
+    .hero-container p{
+        padding-inline: 3rem;
+    }
+    .team-box{
+        gap: 1rem;
+        flex-direction: column;
+    }
+    .team-heading{
+        margin: 0 7px 40px;
+    }
+    .team > img:first-child{
+        width: 240px;
+        height: 240px;  
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .card-img img{
+        height: 270px;
+        width: 255px;
+    }
+    .card{
+        margin: 0 40px 100px;
+    }
+    .card-heading{
+        font-size: 38px;
+    }
+    .vision-text{
+        padding: 30px 20px;
+        height: 55vh;
+    }
+    .vision-text p{
+        padding: 4px;
+    }
+    .team-heading{
+        font-size: 36px;
+        margin: 0 4px 40px;
+    }
+    .vision-heading{
+        font-size: 37px;
+    }
+    .testimonials-heading{
+        font-size: 37px;
+    }
+    #section-divider{
+        margin-inline: 3rem !important;
+    }
+    .hero-container p{
+        padding-inline: 1rem;
+        font-size: 14px;
+    }
+    .hero-container h1{
+        font-size: 42px;
+    }
+}

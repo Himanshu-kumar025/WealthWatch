@@ -1,0 +1,19 @@
+@media  screen and (max-width: 380px) {
+  #footer-text{
+   padding: 0; 
+  }
+  #links{
+    gap: 21px;
+  }
+  #icons{
+    padding-top: 0;
+  }
+}
+
+@media  screen and (max-width: 800px) {
+  #footer-text{
+   padding: 0 20px; 
+  }
+}
+
+

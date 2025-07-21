@@ -1,0 +1,18 @@
+.icon{
+    position: relative;
+    left: 40%;
+    bottom: 19%;
+    z-index: 5;
+}
+
+@media screen and (max-width: 1030px) {
+ .profile{
+    margin-left: 0px;
+ }   
+}
+@media screen and (max-width: 600px) {
+ .profile-text{
+   text-align: center;
+   margin: 15px 10px;
+ }   
+}

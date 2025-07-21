@@ -1,0 +1,101 @@
+@import "tailwindcss";
+
+
+
+
+
+
+
+.swiper-button-prev {
+  left: 0px; /* push left arrow outside the container */
+}
+
+.swiper-button-next {
+  right: 0px; /* push right arrow outside the container */
+}
+
+/* Custom swiper arrows */
+.custom-swiper .swiper-button-next,
+.custom-swiper .swiper-button-prev {
+  background-color: #2D5359;
+  color: rgb(255, 255, 255);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Optional: Hide default icon content and use custom */
+.custom-swiper .swiper-button-next::after,
+.custom-swiper .swiper-button-prev::after {
+  font-size: 14px;
+}
+
+
+.swiper-pagination-bullet-active {
+    opacity: var(--swiper-pagination-bullet-opacity, 1);
+    background: #2D5359;
+}
+
+@media screen and (max-width: 800px){
+  .blogs{
+    width: 275px;
+    height: 360px;
+    margin-bottom: 50px;
+  }
+  .tips{
+    width: 275px;
+  }
+  .videos{
+    width: 275px;
+  }
+}
+
+@media screen and  (max-width:700px){
+  .blog-slider{
+    margin: auto;
+  }
+}
+
+
+@media screen and  (max-width:460px){
+  .blog-box{
+    margin: 0px auto;
+  }
+  .blog-slider{
+    width: 260px;
+  }
+  .swiper-button-prev{
+    left: 0px;
+  }
+  .swiper-button-next{
+    right: 0px;
+  }
+  .custom-swiper .swiper-button-next,
+  .custom-swiper .swiper-button-prev {
+    width: 25px;
+    height: 30px;
+  }
+  .blogs img{
+    height: 170px;
+    margin-bottom: 20px;
+  }
+  .blogs p{
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+  .blogs {
+    width: 235px;
+    height: 360px;
+    margin-bottom: 50px;
+  }
+  .tips{
+    width: 235px;
+  }
+  .videos{
+    width: 235px;
+  }
+}

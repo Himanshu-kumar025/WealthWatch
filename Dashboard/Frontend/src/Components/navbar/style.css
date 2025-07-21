@@ -1,0 +1,16 @@
+.fc-toolbar-title{
+    margin-inline: 12px !important;
+}
+
+@media screen and (max-width: 500px) {
+  #logo img{
+    width: 160px !important; 
+  }
+  .calendar{
+    width: 87vw;
+    padding-inline: 16px;
+  }
+  .fc-toolbar-chunk{
+    display: flex !important;
+  }
+}

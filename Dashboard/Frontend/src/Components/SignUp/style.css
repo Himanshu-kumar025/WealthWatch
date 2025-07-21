@@ -1,0 +1,48 @@
+.box{
+    background-color: #fff;
+    height: 70vh; 
+    width: 30%; 
+    margin: auto; 
+    border-radius: 10px; 
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+
+input:hover,
+input:focus {
+  border: none; /* or any color you want */
+  outline: none;
+  box-shadow: none;
+}
+
+.box input{
+    width: 100%;
+    padding: 0;
+}
+
+@media screen and (max-width: 1200px) {
+    .box{
+        width: 40% !important;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .box{
+        width: 52% !important;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .box{
+        width: 68% !important;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .box{
+        width: 92% !important;
+    }
+}

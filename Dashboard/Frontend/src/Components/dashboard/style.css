@@ -1,0 +1,150 @@
+@media screen and (max-width: 1300px) {
+    .dashboard {
+        margin-left: 0px;
+    }
+    .block{
+        margin-inline: 4px;
+        font-size: large;
+    }
+    .budget{
+        padding-inline: 24px !important;
+    }
+    .budget button{
+        width: 145px;
+        padding: 10px;
+    }
+    .anomaly{
+        padding-inline: 24px !important;
+    }
+}
+
+@media screen and (max-width: 1030px){
+    .dashboaard-right{
+        width: 100vw;
+    }
+    .monthchart-1{
+        width: 98.5%;
+        padding-inline: 14px;
+    }
+    .monthchart-2 > div{
+        height: 40vh;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .d-1 {
+        flex-direction: column;
+        gap: 4px;
+    }
+    #add-daily{
+        width: 98.5%;
+        margin: auto;
+    }
+
+    .balance-1 {
+
+        width: 100%;
+
+    }
+
+    .monthlychart {
+        flex-direction: row;
+        width: 100%;
+    }
+
+    .monthchart-2 {
+        flex-direction: row;
+    }
+
+    .piechart-1 {
+        width: 380px;
+    }
+
+}
+
+@media screen and (max-width: 770px) {
+    .budget{
+        padding-inline: 17px !important;
+    }
+    .anomaly{
+        padding-inline: 17px !important;
+    }
+    .budget button{
+        width: 157px;
+        padding: 5px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .monthchart-1{
+        padding: 10px 10px;
+    }
+    .piechart-1 {
+        width: 300px;
+    }
+    .ai-box{
+        padding-inline: 0px !important;
+    }
+    .budget button {
+        width: 106px;
+        padding: 5px;
+    }
+    .budget p{
+        font-size: 14px;
+    }
+    .budget-text{
+        gap: 14px;
+        flex-direction: column;
+    }
+    .budget h1{
+        font-size: 1.2rem;
+    }
+    .heading{
+        font-size: 1.2rem;
+    }
+    .monthchart-1 h1{
+        font-size: 1.2rem;
+    }
+    .anomaly p{
+        font-size: 14px;
+    }
+    .add-daily {
+        padding: 24px 17px;
+    }
+
+    .add-daily-b-1 {
+        width: 100%;
+        flex-direction: column;
+        gap: 1.2rem;
+    }
+
+    .add-daily-b-2 {
+        flex-direction: column;
+        gap: 1.2rem;
+        width: 100%;
+    }
+
+    .add-daily-b-3 {
+        flex-direction: column;
+        gap: 1.2rem;
+        width: 100%;
+    }
+    .anomaly-alert{
+        text-align: center;
+        flex-direction: column;
+        gap: 20px;
+    }
+    .add-b{
+        width: 100%;
+    }
+    .progess-bar{
+        padding: 20px 10px;
+    }
+}
+
+@media screen and (max-width: 1024px)and(min-width :780px) {
+    .d-1 {
+        margin-bottom: 10px;
+    }
+}

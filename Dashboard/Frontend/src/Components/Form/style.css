@@ -1,0 +1,24 @@
+.page{
+    background-color: rgba(184, 215, 222, 0.55);
+    height: 100vh;
+    position: static;
+}
+
+.input{
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.input:hover{
+    background-color: transparent;
+    border: 2px solid rgba(0, 0, 0, 0.1);
+}
+
+.form{
+    width: 90%;
+}
+
+@media screen and (max-width: 520px) {
+    #form-btn{
+        width: 90%;
+    }
+}
