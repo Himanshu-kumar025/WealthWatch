@@ -1,5 +1,5 @@
 import Faq from "./faq.jsx";
-import SupportCard from "./supportCard.jsx";
+import SupportCard from "./SupportCard.jsx";
 
 
 export default function Support() {
