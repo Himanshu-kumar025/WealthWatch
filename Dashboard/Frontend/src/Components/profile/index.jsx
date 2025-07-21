@@ -1,7 +1,7 @@
 import "./style.css";
 import { useState, useEffect } from "react";
 import axios from "axios";
-import { BASE_URL } from "../../../../backend/axiosConfig.js";
+import { BASE_URL } from "../axiosConfig.js";
 import { CurrentTotalExpence } from "../data/CalCurrentMonthExpence.js";
 
 export default function ProfilePage() {

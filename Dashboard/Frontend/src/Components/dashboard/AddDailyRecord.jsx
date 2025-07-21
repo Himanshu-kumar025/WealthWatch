@@ -1,6 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
-import { BASE_URL } from "../../../../backend/axiosConfig.js";
+import { BASE_URL } from "../axiosConfig.js";
 
 export default function AddDailyRecord() {
     const [category, setCategory] = useState("");

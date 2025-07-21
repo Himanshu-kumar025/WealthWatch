@@ -2,7 +2,7 @@ import { ForthFoodExpence, ForthHousingExpence, ForthSavingExpence, ForthPersona
 import { useState, useEffect } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import axios from "axios";
-import { BASE_URL } from "../../../../../backend/axiosConfig.js";
+import { BASE_URL } from "../../axiosConfig.js";
 
 export default function ForthHistoryIndividual() {
     const navigate = useNavigate();

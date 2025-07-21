@@ -2,8 +2,8 @@ import "./style.css";
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { BASE_URL } from "../../../../backend/axiosConfig";
-import { WEBPAGE_URL } from "../../../../backend/axiosConfig";
+import { BASE_URL } from "../axiosConfig.js";
+import { WEBPAGE_URL } from "../axiosConfig.js";
 
 export default function Signup() {
     const navigate = useNavigate(); // React Router hook for navigation

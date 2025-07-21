@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-import { BASE_URL } from "../../../../backend/axiosConfig";
+import { BASE_URL } from "../axiosConfig.js";
 import { useNavigate } from "react-router-dom";
 
 export default function BudgetRecommendation() {

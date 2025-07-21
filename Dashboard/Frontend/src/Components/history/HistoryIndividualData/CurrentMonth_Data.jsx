@@ -4,7 +4,7 @@ import {
 import { useState, useEffect } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import axios from "axios";
-import { BASE_URL } from "../../../../../backend/axiosConfig.js";
+import { BASE_URL } from "../../axiosConfig.js";
 import { fetchMonthlyData } from "../../data/InputData.js";
 
 export default function CurrentHistoryIndividual() {

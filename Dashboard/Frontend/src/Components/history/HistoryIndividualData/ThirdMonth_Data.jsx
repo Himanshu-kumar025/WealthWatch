@@ -2,7 +2,7 @@ import { ThirdFoodExpence, ThirdHousingExpence, ThirdPersonalExpence, ThirdSavin
 import { useState, useEffect } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import axios from "axios";
-import { BASE_URL } from "../../../../../backend/axiosConfig.js";
+import { BASE_URL } from "../../axiosConfig.js";
 
 export default function ThirdHistoryIndividual() {
     const navigate = useNavigate();

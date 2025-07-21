@@ -3,7 +3,7 @@ import "./style.css";
 import "../SignUp/style.css";
 import { useNavigate } from 'react-router-dom';
 import axios from "axios";
-import { BASE_URL } from "../../../../backend/axiosConfig";
+import { BASE_URL } from "../axiosConfig.js";
 
 export default function Form() {
     const navigate = useNavigate();

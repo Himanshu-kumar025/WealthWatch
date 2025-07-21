@@ -1,5 +1,5 @@
 import axios from "axios";
-import { BASE_URL } from "../../../../backend/axiosConfig.js";
+import { BASE_URL } from "../axiosConfig.js";
 
 export const fetchMonthlyData = async (monthIndex) => {
   try {

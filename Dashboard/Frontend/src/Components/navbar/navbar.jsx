@@ -1,5 +1,5 @@
 import "./style.css";
-import { BASE_URL } from "../../../../backend/axiosConfig.js";
+import { BASE_URL } from "../axiosConfig.js";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import Calendar from "./calendar";

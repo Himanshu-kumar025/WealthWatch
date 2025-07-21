@@ -1,4 +1,4 @@
-import { DASHBOARD_URL } from '../../../../backend/axiosConfig';
+import { DASHBOARD_URL } from "../axiosConfig.js";
 import './style.css';
 import { Link } from "react-router-dom";
 
