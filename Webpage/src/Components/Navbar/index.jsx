@@ -1,7 +1,7 @@
 import "./style.css"
 import { useNavigate } from 'react-router-dom';
 import { useState } from "react";
-import { DASHBOARD_URL } from "../../../../../Dashboard/backend/axiosConfig";
+import { DASHBOARD_URL } from "../axiosConfig.js";
 
 export default function Navbar() {
 

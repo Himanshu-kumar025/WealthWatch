@@ -1,5 +1,5 @@
 import "./style.css"
-import { DASHBOARD_URL } from "../../../../../Dashboard/backend/axiosConfig";
+import { DASHBOARD_URL } from "../axiosConfig.js";
 
 export default function Footer() {
 
