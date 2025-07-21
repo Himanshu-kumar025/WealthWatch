@@ -1,7 +1,7 @@
 import axios from "axios";
 
 // Define base URLs for different parts of the application
-export const BASE_URL = "https://wealth-watch-backend.vercel.app";        // Backend server
+export const BASE_URL = "https://wealthwatch-backend-jdwd.onrender.com";        // Backend server
 export const WEBPAGE_URL = "https://wealth-watch-five.vercel.app";     // Frontend public-facing webpage
 export const DASHBOARD_URL = "https://wealth-watch-dashboard-one.vercel.app";   // Frontend admin/user dashboard
 
