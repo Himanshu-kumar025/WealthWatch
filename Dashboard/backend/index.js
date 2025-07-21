@@ -32,7 +32,7 @@ app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
 // Enable CORS for frontend apps
 app.use(cors({
-    origin: ['http://localhost:5173', 'http://localhost:5174'],
+    origin: ['https://wealth-watch-dashboard-one.vercel.app/'],
     credentials: true,
     allowedHeaders: ['Content-Type', 'Authorization']
 }));
