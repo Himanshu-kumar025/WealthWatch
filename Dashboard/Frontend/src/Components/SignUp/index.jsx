@@ -112,7 +112,7 @@ export default function Signup() {
 
                         {/* Password input */}
                         <div className="password flex pt-5 pb-1" style={{ borderBottom: "2px solid rgba(0, 0, 0, 0.2)" }}>
-                            <img src="/image/signUp-email.png" alt="signUp-password" className='w-10 h-10 p-2' />
+                            <img src="/image/signUp-password.png" alt="signUp-password" className='w-10 h-10 p-2' />
                             <input
                                 type="password"
                                 id="password"
