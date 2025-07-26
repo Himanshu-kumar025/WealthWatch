@@ -80,80 +80,95 @@ export default function CurrPie() {
             hoverOffset: 3
         }]
     };
+
+    const allZero =
+        FoodExpences == 0 &&
+        TransportExpences == 0 &&
+        SavingExpences == 0 &&
+        HousingExpences == 0 &&
+        PersonalExpences == 0;
+
+    if (allZero) {
+        return <div className="text-center mt-20"><div className="hidden"></div></div>;
+    }
+
+
     return (
         <>
-            <div className="font-medium text-xl sm:text-start mb-2 hover:cursor-pointer" >
-                {MonthName[5]}
-            </div>
-
-            <div className="flex justify-between c-monthchart-1 w-full text-center mb-5">
-                <div className="w-[40%] flex c-monthchart-1-2 ">
-                    <PieChart key={JSON.stringify(data)} data={data} />
+            <div className={`bg-white w-full h-fit rounded-2xl px-5 py-6 `}>
+                <div className="font-medium text-xl sm:text-start mb-2 hover:cursor-pointer" >
+                    {MonthName[5]}
                 </div>
 
-                <div className=" c-monthchart-1-2 w-[50%] flex items-center pr-2 mb-5">
-                    <ul className="w-full">
-                        <li className="flex justify-between">
-                            <div className="flex flex-row items-center gap-3 ">
-                                <div className="rounded-full h-[12px] w-[12px] " style={{ backgroundColor: 'rgb(66, 133, 244)' }}></div>
-                                <h1>Housing</h1>
-                            </div>
+                <div className="flex justify-between c-monthchart-1 w-full text-center mb-5">
+                    <div className="w-[40%] flex c-monthchart-1-2 ">
+                        <PieChart key={JSON.stringify(data)} data={data} />
+                    </div>
 
-                            <div>
-                                {Housing_percentage}%
-                            </div>
+                    <div className=" c-monthchart-1-2 w-[50%] flex items-center pr-2 mb-5">
+                        <ul className="w-full">
+                            <li className="flex justify-between">
+                                <div className="flex flex-row items-center gap-3 ">
+                                    <div className="rounded-full h-[12px] w-[12px] " style={{ backgroundColor: 'rgb(66, 133, 244)' }}></div>
+                                    <h1>Housing</h1>
+                                </div>
 
-                        </li>
-                        <li className="flex justify-between">
-                            <div className="flex flex-row items-center gap-3 ">
-                                <div className="rounded-full h-[12px] w-[12px] " style={{ backgroundColor: 'rgb(59, 192, 95)' }}></div>
-                                <h1>Food</h1>
-                            </div>
+                                <div>
+                                    {Housing_percentage}%
+                                </div>
 
-                            <div>
-                                {Foodpercentage}%
-                            </div>
-                        </li>
-                        <li className="flex justify-between ">
-                            <div className="flex flex-row items-center gap-3 ">
+                            </li>
+                            <li className="flex justify-between">
+                                <div className="flex flex-row items-center gap-3 ">
+                                    <div className="rounded-full h-[12px] w-[12px] " style={{ backgroundColor: 'rgb(59, 192, 95)' }}></div>
+                                    <h1>Food</h1>
+                                </div>
 
-                                <div className="rounded-full h-[12px] w-[12px] " style={{ backgroundColor: 'rgb(251, 188, 5)' }}></div>
-                                <h1>Transport</h1>
-                            </div>
-                            <div>
-                                {TransportPercentage}%
-                            </div>
-                        </li>
-                        <li className="flex justify-between ">
-                            <div className="flex flex-row items-center gap-3 ">
+                                <div>
+                                    {Foodpercentage}%
+                                </div>
+                            </li>
+                            <li className="flex justify-between ">
+                                <div className="flex flex-row items-center gap-3 ">
 
-                                <div className="rounded-full h-[12px] w-[12px] " style={{ backgroundColor: 'rgb(116, 180, 228)' }}></div>
-                                <h1>Personal expence</h1>
-                            </div>
-                            <div>
-                                {Personal_percentage}%
-                            </div>
+                                    <div className="rounded-full h-[12px] w-[12px] " style={{ backgroundColor: 'rgb(251, 188, 5)' }}></div>
+                                    <h1>Transport</h1>
+                                </div>
+                                <div>
+                                    {TransportPercentage}%
+                                </div>
+                            </li>
+                            <li className="flex justify-between ">
+                                <div className="flex flex-row items-center gap-3 ">
 
-                        </li>
-                        <li className="flex justify-between">
-                            <div className="flex flex-row items-center gap-3 ">
+                                    <div className="rounded-full h-[12px] w-[12px] " style={{ backgroundColor: 'rgb(116, 180, 228)' }}></div>
+                                    <h1>Personal expence</h1>
+                                </div>
+                                <div>
+                                    {Personal_percentage}%
+                                </div>
 
-                                <div className="rounded-full h-[12px] w-[12px] " style={{ backgroundColor: 'rgb(11, 209, 235)' }}></div>
-                                <h1>Saving</h1>
-                            </div>
-                            <div>
+                            </li>
+                            <li className="flex justify-between">
+                                <div className="flex flex-row items-center gap-3 ">
 
-                                {Saving_percentage}%
-                            </div>
-                        </li>
+                                    <div className="rounded-full h-[12px] w-[12px] " style={{ backgroundColor: 'rgb(11, 209, 235)' }}></div>
+                                    <h1>Saving</h1>
+                                </div>
+                                <div>
+                                    {Saving_percentage}%
+                                </div>
+                            </li>
 
-                    </ul>
+                        </ul>
+                    </div>
                 </div>
-            </div>
 
-            {location.pathname === "/cashflow/SixMonth" && <div className="h-fit ">
-                <button className="bg-[#2D5359] flex flex-row justify-center items-center h-fit text-white text-center text-[20px] font-medium rounded-lg py-1 px-3" onClick={handleClick}>Detail &nbsp;<i className="fa-solid fa-arrow-right"></i></button>
-            </div>}
+                {location.pathname === "/cashflow/SixMonth" && <div className="h-fit ">
+                    <button className="bg-[#2D5359] flex flex-row justify-center items-center h-fit text-white text-center text-[20px] font-medium rounded-lg py-1 px-3" onClick={handleClick}>Detail &nbsp;<i className="fa-solid fa-arrow-right"></i></button>
+                </div>}
+
+            </div>
         </>
     )
 }

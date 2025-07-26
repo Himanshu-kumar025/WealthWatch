@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { useState, useEffect } from "react";
 import '../style.css'
 export default function SecondHistory() {
-const navigate = useNavigate();
+    const navigate = useNavigate();
 
     // State variables for storing percentages for each category
     const [Foodpercentage, setFoodpercentage] = useState(0);
@@ -25,7 +25,7 @@ const navigate = useNavigate();
             const food = await SecondFoodExpence();
             const transport = await SecondTransportExpence();
             const personal = await SecondPersonalExpence();
-            const saving = await  SecondSavingExpence();
+            const saving = await SecondSavingExpence();
             const housing = await SecondHousingExpence();
 
             // Set percentages
@@ -54,7 +54,26 @@ const navigate = useNavigate();
     };
 
     // Extract month name from URL path
-    const monthName = location.pathname.replace('/historys/' ,'');
+    const monthName = location.pathname.replace('/historys/', '');
+
+    const allZero =
+        foodExpence == 0 &&
+        transportExpence == 0 &&
+        savingExpence == 0 &&
+        housingExpence == 0 &&
+        personalExpence == 0;
+
+    if (allZero) {
+        return (
+            <div className="text-center mt-20">
+                <div className="monthlist w-full h-[100px] bg-white rounded-2xl mt-8 px-8 py-4 flex items-center justify-center max-[1030px]:mb-[200px]">
+                    <p className="text-gray-600 text-lg">No expense data available for the current month.</p>
+                </div>
+            </div>
+        );
+    }
+
+
 
     return (
         <>

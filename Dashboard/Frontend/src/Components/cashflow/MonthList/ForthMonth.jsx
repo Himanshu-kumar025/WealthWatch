@@ -1,7 +1,8 @@
 // Importing required hooks and components
 import { useState, useEffect } from "react";
 import BarGraph from "../pie/barGraph.jsx";
-import { ForthTotalExpence, ForthFoodExpence, ForthTransportExpence, ForthPersonalExpence, ForthHousingExpence, ForthSavingExpence
+import {
+    ForthTotalExpence, ForthFoodExpence, ForthTransportExpence, ForthPersonalExpence, ForthHousingExpence, ForthSavingExpence
 } from "../../data/CalForthMonthExpence.js";
 import ForthMonthList from "./ForthMonthList.jsx";
 import ForthPie from "../pie/ForthMonthpie.jsx";
@@ -40,10 +41,8 @@ export default function ForthMonth() {
             setBalance((total?.TotalBudget || 0) - (total?.Spended || 0)); // Calculating remaining balance
         }
         loadData(); // Calling the data loading function
-    }); 
+    });
 
-    
-  
 
     // Labels and data structure for bar chart
     const labels = ['Food', 'Housing', 'Personal expenses', 'Transport', 'Saving'];
@@ -58,6 +57,23 @@ export default function ForthMonth() {
             }
         ]
     };
+
+    const allZero =
+        FoodExpences == 0 &&
+        TransportExpences == 0 &&
+        SavingExpences == 0 &&
+        HousingExpences == 0 &&
+        PersonalExpences == 0;
+
+    if (allZero) {
+        return (
+            <div className="text-center mt-20">
+                <div className="monthlist w-full h-[100px] bg-white rounded-2xl mt-8 px-8 py-4 flex items-center justify-center max-[1030px]:mb-[200px]">
+                    <p className="text-gray-600 text-lg">No expense data available for the current month.</p>
+                </div>
+            </div>
+        )
+    }
 
     return (
         <>

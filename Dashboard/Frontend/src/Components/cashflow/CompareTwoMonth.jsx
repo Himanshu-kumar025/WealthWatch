@@ -160,8 +160,22 @@ export default function CompareTwoMonth() {
     </div>
   );
 
+  
   // Show loading state if data hasn't loaded yet
-  if (!currentData || !secondData || !barData) return <p className="text-center mt-20">Loading...</p>;
+  if (!currentData || !secondData || !barData) {
+    return <p className="text-center mt-20">Loading...</p>;
+  }
+
+  const isCurrentEmpty = currentData.expenses.every((val) => val === 0);
+  const isSecondEmpty = secondData.expenses.every((val) => val === 0);
+
+  if (isCurrentEmpty && isSecondEmpty) {
+    return (
+      <div className="bg-white w-full h-fit rounded-2xl p-10 text-center mt-20 text-gray-600 text-xl">
+        No expense data available for the selected months.
+      </div>
+    );
+  }
 
   // Pie chart configurations
   const currPieData = {
@@ -199,14 +213,31 @@ export default function CompareTwoMonth() {
       </div>
 
       {/*  Two Pie Charts for Visualizing Each Month  */}
-      <div className="compare-two-month-piecontainer flex flex-row gap-4 mt-6">
+      <div className="compare-two-month-piecontainer flex flex-row gap-4 mt-6 mb-6">
         {renderPieCard(monthNames[5], currPieData, currentData.percentages, currentData.spended, currentData.balance)}
-        {renderPieCard(monthNames[4], secondPieData, secondData.percentages, secondData.spended, secondData.balance)}
+        {
+          secondData.expenses.every((val) => val === 0) ? (
+            <div className="compare-two-month-pieBox bg-white w-full h-[470px] rounded-2xl p-5 flex items-center justify-center text-gray-600 text-lg">
+              No expense data available for last month.
+            </div>
+          ) : (
+            renderPieCard(monthNames[4], secondPieData, secondData.percentages, secondData.spended, secondData.balance)
+          )
+        }
       </div>
 
       <div className="compare-two-month-list flex flex-row gap-4 mt-6 mb-[200px]">
         <CurrentMonthList />
-        <SecondMonthList />
+        {
+          secondData.expenses.every((val) => val === 0) ? (
+            <div className="bg-white w-full  h-[470px] rounded-2xl p-5 flex items-center justify-center text-gray-600 text-lg">
+              No detailed expense data available for last month.
+            </div>
+          ) : (
+            <SecondMonthList />
+          )
+        }
+
       </div>
     </div>
   );

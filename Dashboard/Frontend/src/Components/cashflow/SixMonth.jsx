@@ -12,29 +12,17 @@ export default function SixMonth() {
 
       <div className="sixmonth grid grid-cols-2 gap-3 mt-8 w-full h-fit mb-[200px]">
 
-        <div className={`bg-white w-full h-fit rounded-2xl px-5 py-6 `}>
-          <CurrPie />
-        </div>
+        <CurrPie />
 
-        <div className={`bg-white w-full h-fit rounded-2xl px-5 py-6`}>
-          <SecondPie />
-        </div>
+        <SecondPie />
 
-        <div className={`bg-white w-full h-fit rounded-2xl px-5 py-6`}>
-          <ThirdPie />
-        </div>
+        <ThirdPie />
 
-        <div className={`bg-white w-full h-fit rounded-2xl px-5 py-6`}>
-          <ForthPie />
-        </div>
+        <ForthPie />
 
-        <div className={`bg-white w-full h-fit rounded-2xl px-5 py-6`}>
-          <FifthPie />
-        </div>
+        <FifthPie />
 
-        <div className={`bg-white w-full h-fit rounded-2xl px-5 py-6`}>
-          <SixthPie />
-        </div>
+        <SixthPie />
 
       </div>
 

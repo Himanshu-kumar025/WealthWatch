@@ -56,6 +56,25 @@ export default function ThirdHistory() {
     // Extract month name from URL path
     const monthName = location.pathname.replace('/historys/', '');
 
+    const allZero =
+        foodExpence == 0 &&
+        transportExpence == 0 &&
+        savingExpence == 0 &&
+        housingExpence == 0 &&
+        personalExpence == 0;
+
+    if (allZero) {
+        return (
+            <div className="text-center mt-20">
+                <div className="monthlist w-full h-[100px] bg-white rounded-2xl mt-8 px-8 py-4 flex items-center justify-center max-[1030px]:mb-[200px]">
+                    <p className="text-gray-600 text-lg">No expense data available for the current month.</p>
+                </div>
+            </div>
+        );
+    }
+
+
+
     return (
         <>
             {/* History Data Container */}

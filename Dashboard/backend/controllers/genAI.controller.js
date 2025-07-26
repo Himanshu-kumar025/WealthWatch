@@ -1,8 +1,8 @@
+import User from "../models/user.models.js";
 import { GoogleGenerativeAI } from "@google/generative-ai";
 import dotenv from "dotenv";
 
 dotenv.config();
-
 
 const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
 const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
@@ -12,24 +12,23 @@ const generationConfig = {
   temperature: 0.7,      // Controls randomness (0 = deterministic, 1 = random)
   topP: 1,               // Nucleus sampling (probability mass to consider)
   topK: 1,               // Limits to top-K predictions
-  maxOutputTokens: 400,  // Limits length of the generated response
+  maxOutputTokens: 200,  // Limits length of the generated response
 };
 
 // Controller function to handle AI prompt requests
 export const askGeminiAI = async (req, res) => {
   const { prompt } = req.body;
 
-
   const token = req.headers.authorization;
   if (!token) {
     console.error("No token provided");
-    return; // Return nothing if token is missing 
+    return res.status(401).json({ error: "No token provided" });
   }
 
   const user = await User.findOne({ token });
   if (!user) {
     console.error("Unauthorized user");
-    return; // Token does not match any user in the database
+    return res.status(401).json({ error: "Unauthorized user" });
   }
 
   if (!prompt) {
